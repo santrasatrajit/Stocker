@@ -9,7 +9,7 @@ function App() {
         <div className="App">
           <Header as="h1" className="stockHeader" style={{margin:0, minHeight: 50}} color="pink">Stocker</Header>
         </div>
-        <div style={{marginTop: 30}}>
+        <div style={{margin: 30}}>
           <SideMenu/>
         </div>
       </div>
