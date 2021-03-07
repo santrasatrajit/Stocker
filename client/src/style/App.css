@@ -1,11 +1,11 @@
 .App {
   text-align: center;
-  background-color: rgb(22, 21, 21);
+  background-color: rgb(41, 39, 39);
 }
 
 .stockHeader {
   color: teal;
-  background-color: black;
+  background-color: rgb(32, 31, 31);
   margin: 0px;
   padding: 5px;
   min-height: 50px;

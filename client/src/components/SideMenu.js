@@ -1,9 +1,11 @@
 import React, { Component } from "react";
 import { Grid, Menu } from "semantic-ui-react";
 import 'semantic-ui-css/semantic.min.css';
+
 import Stocks from "./Stocks";
 import AboutUs from "./AboutUs";
 import Companies from "./Companies";
+
 
 class SideMenu extends Component {
   state = { activeItem: "stocks" };
