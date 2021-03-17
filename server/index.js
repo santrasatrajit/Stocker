@@ -1,11 +1,14 @@
 const unirest = require("unirest");
 const express = require("express");
 const app = express();
+const cors=require("cors")
 
 const hostname = "localhost";
-const port = 3000;
+const port = 3001;
 
-app.use(express.json());
+
+app.use(cors())
+;app.use(express.json());
 
 app.get("/", (req, res) => {
   var request = unirest("GET", "https://apidojo-yahoo-finance-v1.p.rapidapi.com/market/get-trending-tickers");
@@ -38,7 +41,7 @@ app.get("/", (req, res) => {
       console.log(stock);
     }
     console.log(stocks);
-    //res.json({"topTenTrendingStocks": stocks});
+res.json({"topTenTrendingStocks": stocks});
   });
 });
 
@@ -65,7 +68,7 @@ app.get("/search", function (req, res) {
     let name = response.body.price.shortName;
     let price = response.body.price.regularMarketOpen.fmt;
     let margin = response.body.defaultKeyStatistics.profitMargins.fmt;
-    //res.json({"tickerName": name, "tickerMarketOpen": price, "tickerProfitMargin": margin});
+  res.json({"tickerName": name, "tickerMarketOpen": price, "tickerProfitMargin": margin});
     console.log(name, price, margin);
   });
 });
