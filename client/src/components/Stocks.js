@@ -19,7 +19,7 @@ function Stocks() {
 
 
   return (
-    <div style={{paddingTop:10}}>
+    <div style={{paddingTop:10, paddingRight:40}}>
       {state.data?
         <List divided relaxed>
           {state.data.topTenTrendingStocks.map(item => {
