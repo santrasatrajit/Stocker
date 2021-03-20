@@ -38,14 +38,14 @@ app.get("/", (req, res) => {
       stock.push(price);
       stock.push(ticker);
       stocks.push(stock);
-      console.log(stock);
+      //console.log(stock);
     }
-    console.log(stocks);
+    //console.log(stocks);
 res.json({"topTenTrendingStocks": stocks});
   });
 });
 
-app.get("/search", function (req, res) {
+/*app.get("/search", function (req, res) {
   //let ticker = req.query.ticker;
   let ticker = "AMRN";
 
@@ -71,7 +71,7 @@ app.get("/search", function (req, res) {
   res.json({"tickerName": name, "tickerMarketOpen": price, "tickerProfitMargin": margin});
     console.log(name, price, margin);
   });
-});
+});*/
 
 app.listen(port, hostname, () => {
   console.log(`Listening at: http://${hostname}:${port}`);
